@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Best Wedding planner that has various quality to bring the changement in functions">
+    <meta name="keywords" content="Wedding planner, Best wedding planner, bride, groom">
+    <meta name="author" content="Adil Hussain">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding Planner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="styleos.css">
+
+</head>
+
+<body onload="loader()" id="top" data-spy="scroll" data-target="navbar-collapse" data-offset="50">
+    <!-- Pre Loader Starts-->
+    <div id="loading">
+        <img src="images/preloader1.gif" alt="Loading...">
+    </div>
+    <!--Pre Loader Ends-->
+
+    <!--Back to Top starts-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-circle-up"></i></button>
+    <!--Back to Top Ends-->
+
+    <!-- Header Starts-->
+    <div class=" container-fluid mt-3">
+        <div class="row font text-info">
+
+            <div class="col-md-4 col-sm-5">
+                <p class="mt-2">Welcome to Professional Wedding Planner</p>
+            </div>
+
+            <div class="col-md-8 col-sm-7 mt-1">
+                <span class="phone-icon"><i class="fa fa-phone pl-5"></i> 010-060-0160</span>
+                <span class="date-icon"><i class="fa fa-calendar-plus-o pl-5"></i> 6:00 AM - 10:00 PM
+                    (24x7)</span>
+                <span class="email-icon"><i class="fa fa-envelope-o pl-5"></i> <a class="text-info" href="#"
+                        target="_blank">info@weddingplanner.com</a></span>
+                <!--Social Media Icons Start-->
+                <div class="to-social-follow mr-5">
+                    <a href="#" class="fa fa-instagram" target="_blank"></a>
+                    <a href="#" class="fa fa-twitter" target="_blank"></a>
+                    <a href="#" class="fa fa-facebook" target="_blank"></a>
+                </div>
+                <!--Social Media Icons End-->
+            </div>
+        </div>
+    </div>
+    <hr>
+    </header>
+    <!--Header Ends-->
+
+    <!--Navigations Bar Starts-->
+
+    <nav class="navbar navbar-expand-md bg-white navbar-light">
+        <!--Website Logo-->
+        <span class="navbar-brand"><img src="images/logo.png" alt="logo" id="img"></span>
+        <!--Toggler Button Starts-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Toggler Button Ends-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="our-services.html">Our Services</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+            </ul>
+            <!--PopUp Starts-->
+            <button class="open-button btn btn-info mr-3 p-2" data-target="#popup" data-toggle="modal">Book
+                Now</button>
+
+            <div class="modal" id="popup">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Book Now</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="book.php" method="POST" onsubmit="return validation()" id="form" name="form">
+                                <div class="form-group">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <label for="Name">Name <span class="text-danger font-weight-bold">*</span></label>
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name"
+                                        id="name">
+                                    <span class="text-danger font-weight-bold" id="user"></span>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <label for="email">E-Mail <span
+                                            class="text-danger font-weight-bold">*</span></label>
+                                    <input type="email" class="form-control" name="email" placeholder="E-mail"
+                                        id="email">
+                                    <span class="text-danger font-weight-bold" id="mail"></span>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <label for="phone">Phone <span class="text-danger font-weight-bold">*</span></label>
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone No."
+                                        id="phone">
+                                    <span class="text-danger font-weight-bold" id="cell"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="book" class="pt-2 pl-1">Book for <span
+                                            class="text-danger font-weight-bold">*</span></label>
+                                    <input type="radio" name="booking" value="Bride" class="ml-3" id="book"> Bride
+                                    <input type="radio" name="booking" value="Groom" class="ml-3" id="book"> Groom
+                                    <input type="radio" name="booking" value="Both" class="ml-3" id="book"> Both
+                                    <span class="text-danger font-weight-bold" id="booking"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <label for="date">Date <span class="text-danger font-weight-bold">*</span></label>
+                                    <input type="date" class="form-control" name="date" id="date">
+                                    <span class="text-danger font-weight-bold" id="dates"></span>
+                                </div>
+                                <div class="form-group ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <label for="Address" id="add" class="pt-0">Address <span
+                                            class="text-danger font-weight-bold">*</span></label>
+                                    <textarea type="text" class="form-control" name="address" placeholder="Your Address"
+                                        id="address font-weight-bold"></textarea>
+
+                                </div>
+                                <span class="text-danger" id="add"></span>
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <!--PopUp Ends-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navigation Bar Ends-->
+
+    <!--Our Services Start-->
+    <section>
+        <h4 class="text-center font-weight-bold mt-4">Our Services</h4>
+    </section>
+    <!--Our Services Start-->
+
+    <!--Footer Starts-->
+    <section>
+        <footer class="footer mt-5 text-center  bg-dark text-light pt-2 pb-2">
+            <div class="to-social-follow" id="icon">
+                <a href="#" class="fa fa-facebook" target="_blank"></a>
+                <a href="#" class="fa fa-twitter" target="_blank"></a>
+                <a href="#" class="fa fa-instagram" target="_blank" id="insta"></a>
+            </div>
+            <h5>Design and Developed by : Adil Hussain</h5>
+            <p>Copyright © Wedding Planner 2020</p>
+        </footer>
+    </section>
+    <!--Footer Ends-->
+
+
+    <script>
+
+        //Spinner Starts//
+        let spinner = document.getElementById('loading');
+        function loader() {
+            spinner.style.display = "none";
+        }
+        //Spinner Ends//
+        //Back to Top Starts
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // //Back Button Disable Starts//
+        // function preventBack() { window.history.forward(); }
+        // setTimeout("preventBack()", 0);
+        // window.onunload = function () { null };
+        // //Back Button Disable Ends//
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //Back to Top Ends//
+        function validation() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let book = document.form.booking;
+            let date = document.getElementById('date').value;
+            let address = document.getElementById('address').value;
+
+            if (name == "") {
+                document.getElementById('user').innerHTML = "*Name field can't be empty";
+                return false;
+            }
+
+
+            if ((name.length <= 2) || (name.length > 50)) {
+                document.getElementById('user').innerHTML = "*Name should betwwen 3 to 50 character";
+                return false;
+            }
+
+
+            if (!isNaN(name)) {
+                document.getElementById('user').innerHTML = "*only characters are allowed";
+                return false;
+            }
+
+            if (email == "") {
+                document.getElementById('mail').innerHTML = "*E-mail field can't be empty";
+                return false;
+            }
+
+            if (phone == "") {
+                document.getElementById('cell').innerHTML = "*Phone no. field can't be empty";
+                return false;
+            }
+
+            if (isNaN(phone)) {
+                document.getElementById('cell').innerHTML = "*only numbers are allowed";
+                return false;
+            }
+            
+
+
+            if (date == "") {
+                document.getElementById('dates').innerHTML = "*Please select date also";
+                return false;
+            }
+            if (address == "") {
+                document.getElementById('add').innerHTML = "*Address field can't be empty";
+                return false;
+            }
+            for (i = 0; i < book.length; i++) {
+                if (book[i].checked == true)
+                    return true;
+                    
+            }
+            document.getElementById('booking').innerHTML = "*Please select any option";
+            return false;
+
+        }
+    </script>
+    <!--Bootstrap Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
